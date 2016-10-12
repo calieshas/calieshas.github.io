@@ -1,0 +1,38 @@
+
+/*change the box model*/
+html *{
+    box-sizing: border-box;
+        }
+*:before, *:after{
+    box-sizing: border-box;
+        }
+
+
+body {
+    background-color: lightgray;
+        }
+        
+h1 {
+    color:teal;
+    text-align: center;    
+        }
+h2 {
+    color: lightseagreen;
+        }
+        
+a:visited {
+    color:purple
+        }
+        
+a {
+    color:dodgerblue
+        }
+
+#homework {
+    background-color: darkgray;
+    padding: 20px;
+    border: 1px solid black;
+    margin: 30px;
+    width: 400px;
+    
+        }
