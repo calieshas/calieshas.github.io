@@ -29,10 +29,12 @@ h3 {
         
 a:visited {
     color:purple;
+    font-size: 20px;
         }
         
 a {
     color:dodgerblue;
+    font-size: 20px;
 }
 
 table {
