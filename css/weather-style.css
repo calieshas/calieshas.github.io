@@ -50,8 +50,9 @@ table {
 }
 
 table,th,td {
-    border: 2px solid dimgray;
+    border: 1px solid dimgray;
     text-align: center;
+    padding: 1px;
 }
 
 #current{
@@ -67,7 +68,7 @@ p {
 .scrollit {
     overflow:scroll;
     height:100px;
-    width: 800;
+   
 }
 
 footer{
