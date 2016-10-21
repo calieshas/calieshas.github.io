@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Margins and Padding Examples</title>
+  <meta name="Margins and Padding" content="Margins and Padding">
+  <meta name="Caliesha Stimpson" content="Margins and Padding">
+    
+<style>
+    body {
+        margin: 30px;
+        padding: 30px;
+        border: 10px solid black;
+        box-sizing: border-box;
+    }
+    
+    #margins {
+        margin: 50px;
+        padding: 0px;
+        border: 1px solid black;  
+    }
+    
+    #padding {
+        margin: 0px;
+        padding: 25px;
+        border: 1px solid black; 
+    }
+    
+    #border {
+        margin: 0px;
+        padding: 0px;
+        border: 10px solid black; 
+    }
+    
+    #where {
+        margin: 55px;
+        padding: 5px;
+        border: 1px solid black;
+        
+    }
+    
+    #right {
+        float: right;
+        margin: 50px;
+        padding: 30px;
+        border: 1px solid black;
+        position: relative;
+        right: 100px;
+        
+    }
+    
+    #left{
+        float: left;
+        margin: 50px;
+        padding: 30px;
+        border: 1px solid black;
+        position: relative;
+        left: 100px;
+    }
+</style>
+</head>
+
+<body>
+    <p id="margins"> This is an example of margins</p>    
+    <p id="padding"> This is padding</p>   
+    <p id="border"> This is a border</p>
+    
+    <p>This is random text to show that this does not have margins or padding, but the line below does.</p>
+    <p id="where"> This has no border, where does the margin stop and padding begin?</p>
+    <p>This is random text to show that this does not have margins or padding, but the line above does.</p>
+ 
+    <p id="right">This is on the right</p>
+    <p id="left">This is on the left</p>
+    
+</body>
+</html>
