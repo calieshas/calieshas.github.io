@@ -11,8 +11,64 @@ body{
     font: 20px "times new roman", times, serif;
     margin: 0;
     padding: 0;
-    background-color: bisque;
+    background-color: gainsboro;
 }
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+#row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+nav{
+    background-color: aqua;
+}
+
+main{
+    background-color: lightgoldenrodyellow;
+}
+
+aside{
+    background-color: plum;
+}
+
+
+nav, main, aside{
+    width: 30%;
+}
+
+
+aside{
+    order: -2;
+}
+
+
+@media screen and (max-width: 500px) {
+    nav, main, aside{
+        width: 25%;
+        margin-right: 5%
+    }
+    
+    
+}
+
+/*/
+nav, aside{ 
+    flex: 1 25%
+    }
+
+main { 
+    flex: 2 50%
+}
+*/
+
+/*
 
 header{
     background-color: lightblue;
@@ -69,4 +125,7 @@ main,
 main{
     width: 50%;
 }
+*/
+
+
 }

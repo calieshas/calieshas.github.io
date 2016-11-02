@@ -1,6 +1,13 @@
 /*weather*/
 
 
+/*
+nav ... words run together
+wireframes, how to make them 100%
+make current conditions L shape around location
+large scroll and current conditions, make width different
+*/
+
 
 html *{
     box-sizing: border-box;
@@ -14,21 +21,34 @@ html *{
         font-size:24px;
         text-align: center;
         }
+
+    #banner{
+        display: flex;
+        justify-content: center;
+    }
+
     nav {
+        display: flex;
+        width: 100%;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
         margin: 20px;
         text-align: center;
+        justify-content: space-around;
         }
+
+
     h1{
         text-align: center;
         font-size: 2em;
+        margin: 50px 5px 5px 5px;
         }
     h2 {
         text-align: center;
         font-size: 1em;
         padding: 2px;
+        margin: 5px;
             }
     h3 {
         text-align: center;
@@ -64,6 +84,11 @@ html *{
         padding: 2px;
         }
 
+    #weatherimg{
+        width: 150px;
+        height: auto;
+    }
+
     p {
         text-align: center;
         }
@@ -72,6 +97,10 @@ html *{
         font-size: 12px;
         text-align: left;
         }
+
+    #nav{
+        display: flex
+    }
 
     #current{
         align-content: center;
@@ -84,31 +113,49 @@ html *{
         min-height: 200px;
         font-size: 18px;
         width: 70%;
-        float: left;
-        position: relative;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
     }
 
     #ad {
         width: 20%;
         min-height: 200px;
-        float: right;
-        position: relative;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
     }
 
+    #row{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 500px){
-    #scroll {
+    
+    #adventures{
         display: none;
     }
     
-    #adventures{
+    #adm{
+        display: none;
+    }
+    
+    #articlem{
+        display: none;
+    }
+    
+    #adventuretextm{
         display: none;
     }
     
@@ -119,18 +166,13 @@ html *{
     #details{
         display: none;
     }
+
     
     .wireframe{
-        width: 250px;
+        width: 100%;
+        height: auto;
     }
-    }
-
-
-
-
-
-
-
+ }
 
 
 
@@ -141,32 +183,65 @@ html *{
 
 
 @media only screen and (max-width: 768px) {
- #details{
+    #details{
+        display: none;
+        }
+    
+    #largescreen{
         display: none;
     }
 }
 
+
+
+
+
+
+
 @media only screen and (min-width: 500px) {
     /* For tablets: */
 
-   
+    #row{
+        display: none;
+    }
+    
+    #ad{
+        display: none;
+    }
+    
+    #adventuretext{
+        display: none;
+    }
+    
+    #mudiumrow {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #column{
+        display: flex;
+        flex-direction: column;
+    }
     
     #location {
         width: 35%;
+        height: 200px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
         margin: 5px;
     }
 
+    #across{
+        display: flex;
+        flex-direction: row;
+    }
+    
     #current{
         align-content: center;
         background-color: gainsboro;
         border: 1px solid black;
         margin: 5px;
-        float: right;
-        position: relative;
-        top: -103px;
         width: 60%;
         }
 
@@ -176,33 +251,20 @@ html *{
         }
     
     #scroll{
-        position: relative;
-        top: 285px;
         margin: 10px;
         }
     
-    .scrollit {
-        overflow:scroll;
-        height:100px;
-        }
-    
-    #adventuretext {
-        min-height: 200px;
-        width: 70%;
+    #adventuretextm {
         font-size: 18px;
-        float: left;
-        position: relative;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
         margin: 10px;
         }
 
-    #ad {
-        height: 200px;
-        width: 20%;
-        float: right;
-        position: relative;
+    #adm {
+        height: 150px;
+        width: 95%;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
@@ -212,163 +274,154 @@ html *{
      #adventures {
         width: 95%;
         min-height: 150px;
-        position: absolute;
-        top: 1220px;
         background-color: gainsboro;
         text-align: center;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
         }
     
-    #article {
-        width: 95%;
-        min-height: 300px;
-        position: absolute;
-        top: 900px;
+    #articlem {
+        height: 150px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
     }
     
     .wireframe {
-        position: relative;
-        top: 500px;
         width: 400px;
     }
     
     #footer{ 
-        position: relative;
-        top: 550px;
+        
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 @media only screen and (min-width: 768px) {
     /* For desktop: */
- #location {
-        width: 35%;
+    
+ #sm{
+    display: none;
+   }
+    
+ #locationl {
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
         margin: 5px;
     }
+    
+    #weatherimg1{
+        width: 150px;
+        height: auto;
+    }
 
-    #current{
+    #currentl{
         align-content: center;
         background-color: gainsboro;
         border: 1px solid black;
-        margin: 5px;
-        float: left;
-        position: relative;
-        top: 10px;
-        width: 30%;
+        margin: 10px;
         }
 
-     .scrollit {
-        overflow:scroll;
+     .scrollitl {
+        overflow: scroll;
         height:300px;
         }
     
     table {
-        height: 198px;
+        height: 298px;
         border-collapse: separate;
+        }
+    
+    #scrolll{
+        margin: 10px;
+        height: 300px;
+        }
+    
+    #row1{
+        display: flex;
+        flex-direction: row;
     }
     
-    #scroll{
-        position: relative;
-        top: 10px;
-        margin: 10px;
-        }
+    #column1{
+        display: flex;
+        flex-direction: column;
+    }
     
-    .scrollit {
-        overflow:scroll;
-        height:200px;
-        }
-    
-    #adventuretext {
+    #adventuretextl {
         min-height: 300px;
         width: 30%;
         font-size: 18px;
-        position: relative;
-        top: 204px;
-        left: 30px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
         }
 
-     #article {
+     #articlel {
         width: 30%;
         min-height: 300px;
-        position: absolute;
-        top: 700px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
     }
     
-     #details {
+     #detailsl {
         height: 300px;
         width: 30%;
-        float: right;
-        position: relative;
-        top: -100px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
         }
     
-    #ad {
+    #adl {
         height: 300px;
         width: 30%;
-        float: right;
-        position: relative;
-        top: 518px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
         }
  
-     #adventures {
+     #adventuresl {
         width: 65%;
         height: 300px;
-        position: relative;
-        top: 520px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
-        margin: 2px;
+        margin: 10px;
         }
     
-    #images {
-        position: relative;
-        top: 550px;
-        width: 400px;
+    #row2{
+        display: flex;
+        flex-direction: row;
     }
     
+      #row3{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    
     #footer{ 
-        position: relative;
-        top: 550px;
+        
     }
 
-}
 }
