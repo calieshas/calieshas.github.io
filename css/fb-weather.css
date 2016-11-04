@@ -2,9 +2,7 @@
 
 
 /*
-nav ... words run together
 wireframes, how to make them 100%
-make current conditions L shape around location
 large scroll and current conditions, make width different
 */
 
@@ -225,7 +223,6 @@ html *{
     
     #location {
         width: 35%;
-        height: 200px;
         background-color: gainsboro;
         border: 1px solid black;
         padding: 5px;
@@ -322,8 +319,9 @@ html *{
  #locationl {
         background-color: gainsboro;
         border: 1px solid black;
-        padding: 5px;
-        margin: 5px;
+        padding: 10px;
+        margin: 10px;
+        width: 100%
     }
     
     #weatherimg1{
@@ -336,26 +334,38 @@ html *{
         background-color: gainsboro;
         border: 1px solid black;
         margin: 10px;
+        padding: 10px;
+        width: 100%;
         }
 
      .scrollitl {
         overflow: scroll;
         height:300px;
+        width: 85%;
+        margin: 10px;
         }
     
-    table {
+    #tablel {
         height: 298px;
         border-collapse: separate;
+        width: 85%;
+        
         }
+    
+    #tablel td{
+        padding: 10px;
+    }
     
     #scrolll{
         margin: 10px;
         height: 300px;
+        width: 85%;
         }
     
     #row1{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
     }
     
     #column1{
