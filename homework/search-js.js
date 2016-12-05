@@ -9,7 +9,7 @@ $(function () {
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
 
-        // Call the getData function, send the lat and long
+
         getData(lat, long);
 
       });
@@ -18,6 +18,38 @@ $(function () {
     }
 
   })();
+    
+    
+    $('#query').keyup(function(){
+
+    var value = $('#query').val();
+    var rExp = new RegExp(value, "i");
+     $.getJSON("https://autocomplete.wunderground.com/aq?query=" + value + "&cb=?", function (data) {
+                 console.log(data);
+       console.log(data)
+        
+
+    var output = '<ol id="ol">';
+    $.each(data.RESULTS, function(key, val) {
+      if (val.name.search(rExp) != -1) {
+        output += '<li>';
+        output += '<a href="https://www.wunderground.com' + val.l +'"title=" see results for'+ val.name + '">' + val.name + '</a>';
+        output += '</li>';
+         
+      }
+    }); 
+    output += '</ol>';
+    $("#searchResults").html(output);
+        function toTitleCase(str){
+    return str.replace(/\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+};
+
+     }); // end getJSONs
+}); // end keyup
+$( "#searchResults" ).click(function(getData) {
+    
+    });
+    
 
   // Get the data from the wunderground API
   function getData(lat, long){
@@ -65,12 +97,35 @@ $(function () {
   }
     });
       $("#cover").fadeOut(250);
-        }
-           });
+        };
+
+    
+    
+    $("#searchResults").on("click", "a", function (evt) {
+  evt.preventDefault();
+  
+  var jsonCity = $(this).text(); // Franklin, etc...
+  console.log(jsonCity);
+  $.ajax({
+    url: "https://api.wunderground.com/api/d8aefd46611743c8/geolookup/conditions/forecast/hourly/satellite/q/" + jsonCity + ".json"
+    , dataType: "jsonp"
+    , success: function (data) {
+      console.log(data);
+      console.log(data['location']['zip']);
+      var zip = data['location']['zip'];
+    console.log(zip);
+    getData(zip);
+    }
+  });
+});
+
+$("#searchResults").on('click', "a", function(evt){
+    document.getElementById('ol').style.display="none";
+})
+
 
   
 
-  // A function for changing a string to TitleCase
   function toTitleCase(str){
     return str.replace(/\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-};
+}
