@@ -1,4 +1,4 @@
 $(function() {
-$("#myheader").load("header.html");
+$("#myheader").load("/final-web-project/header.html");
 });
 
