@@ -7,22 +7,46 @@ html {
     box-sizing: border-box;
         }
 
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    flex-wrap: wrap;
+    border: solid;
+    border-color: white;
+    border-width: thick;
+    margin: 10px, 0px, 10px, 0px;
+}
+
+.links {
+    margin: 8px;
+}
 
 body {
     background-color: Black;
     text-align: center;
-    font-family: monospace;
-    font-size: 18px;
+    font-family: Courier;
+    font-size: 15px;
     margin: 20px;
     
         }
         
 h1 {
-    color:white;    
+    color:white; 
+    font-family: "Lucida Sans Typewriter";
+    padding: 8px;
         }
 
 h2 {
     color: white;
+    font-family: "Lucida Typewriter";
         }
 
 p {
@@ -39,44 +63,59 @@ a {
         }
 
 
-
-.star {
-	margin: 1em 0;
+    
+.image {
+	margin: 20px;
 }
 
-.star img, 
-.star picture{
+.image img, 
+.image picture{
+	display: block;
+	width: 100%;
+	height: auto;
+    align-content: center;
+}
+
+.video {
 	display: block;
 	width: 100%;
 	height: auto;
 }
 
-.video {
-	display: block;
-	width: 100%;
-	height: auto;
-}
 
+/* --------------------------------------------------------
+*
+*
+*medium screen
+*
+*----------------------------------------------------------
+*/
 
-
-
-
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 600px) {
+    
+            
+h1 {
+    color:white; 
+    font-family: "Lucida Sans Typewriter";
+    padding: 8px;
+        }
     
     body {
-        font-size: 15px;
+        font-size: 16px;
     }
     
     
-.star {
-	margin: 1em 0;
+.image {
+	margin: 20px;
+    align-content: center;
 }
 
-.star img, 
-.star picture{
+.image img, 
+.image picture{
 	display: block;
 	width: 90%;
 	height: auto;
+    align-content: center;
 }
 
 .video {
@@ -85,36 +124,47 @@ a {
 	height: auto;
 }
 
-
     
 }
 
 
+/* -----------------------------------------------------------------
+*
+*
+*large screen
+*
+*-------------------------------------------------------------------
+*/
 
-@media screen and (max-width: 800px) {
+
+@media screen and (min-width: 900px) {
+
+        
+h1 {
+    color:white; 
+    font-family: "Lucida Sans Typewriter";
+    padding: 8px;
+        }
     
-    body {
-        font-size: 15px;
+body {
+        font-size: 1em;
     }
     
-    
-.star {
-	margin: 1em 0;
+     
+.image {
+	margin: 20px;
 }
 
-.star img, 
-.star picture{
+.image img, 
+.image picture{
 	display: block;
-	width: 90%;
+	width: 75%;
 	height: auto;
+    align-content: center;
 }
 
 .video {
 	display: block;
-	width: 90%;
+	width: 75%;
 	height: auto;
-}
-
-
-    
 }
