@@ -1,0 +1,120 @@
+
+
+html {
+    box-sizing: border-box;
+        }
+*:before, *:after{
+    box-sizing: border-box;
+        }
+
+
+body {
+    background-color: Black;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+    margin: 20px;
+    
+        }
+        
+h1 {
+    color:white;    
+        }
+
+h2 {
+    color: white;
+        }
+
+p {
+    color: yellow;
+
+}
+        
+a:visited {
+    color:lightgoldenrodyellow;
+        }
+        
+a {
+    color:gainsboro;
+        }
+
+
+
+.star {
+	margin: 1em 0;
+}
+
+.star img, 
+.star picture{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.video {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    
+    body {
+        font-size: 15px;
+    }
+    
+    
+.star {
+	margin: 1em 0;
+}
+
+.star img, 
+.star picture{
+	display: block;
+	width: 90%;
+	height: auto;
+}
+
+.video {
+	display: block;
+	width: 90%;
+	height: auto;
+}
+
+
+    
+}
+
+
+
+@media screen and (max-width: 800px) {
+    
+    body {
+        font-size: 15px;
+    }
+    
+    
+.star {
+	margin: 1em 0;
+}
+
+.star img, 
+.star picture{
+	display: block;
+	width: 90%;
+	height: auto;
+}
+
+.video {
+	display: block;
+	width: 90%;
+	height: auto;
+}
+
+
+    
+}
