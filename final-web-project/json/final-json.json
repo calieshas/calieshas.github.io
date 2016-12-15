@@ -1,0 +1,21 @@
+{
+	"portfolio": {
+            "quote1": "Photography is the story I fail to put into words. - Destin Sparks",
+            "quote2": "In photography there is a reality so subtle that it becomes more real than reality. - Alfred Stieglitz",
+            "quote3": "There is one thing the photograph must contain, the humanity of the moment. - Robert Frank",
+            "quote4": "Taking an image, freezing a moment, reveals how rich reality truly is. - Anonymous",
+            "quote5": "A portrait is not made in the camera but on either side of it. - Edward Steichen",
+            "quote6": "I never have taken a picture I’ve intended. They’re always better or worse. - Diane Arbus"
+        },
+        
+        
+
+	"basics": {
+            "blurry": "fig. 1",
+            "clear": "fig. 2",
+            "isorose": "fig. 3",
+            "aperturerose": "fig. 4",
+            "sunset": "fig. 5",
+            "close": "fig. 6",
+            "far": "fig. 7"
+        }}
